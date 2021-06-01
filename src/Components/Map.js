@@ -5,15 +5,15 @@ export class MapContainer extends Component {
 
   render() {
     return (
+      <div>
       <Map 
       google={this.props.google} 
       zoom={2} 
-      style={{width: 650, height: 400, position: 'relative', margin:10}}
+      style={{width: '98.5%', height: 250}}
       initialCenter={{
-        lat: 12,
-        lng: -8
+        lat:28,
+        lng: 1
       }}>
-
       <Marker
        title={this.props.countryZero + ', primeiro país no índice, com: ' + this.props.casesZero + ' de casos registrados;'}
        position={{lat: this.props.latZero, lng: this.props.longZero}} />
@@ -29,8 +29,8 @@ export class MapContainer extends Component {
        <Marker
        title={this.props.countryFour + ', quinto país no índice, com: ' + this.props.casesFour + ' de casos registrados;'}
        position={{lat: this.props.latFour, lng: this.props.longFour}} />
-
       </Map>
+      </div>
     );
   }
 }
